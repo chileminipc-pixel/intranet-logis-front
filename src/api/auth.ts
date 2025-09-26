@@ -17,12 +17,10 @@ export const login = async (
   email: string,
   password: string
 ): Promise<LoginResponse> => {
-  const response = await axios.post<LoginResponse>(
-    "https://intranet-logis-backend-production.up.railway.app/login",
-    { email, password }
-  );
-  return response.data;
-};
+const response = await axios.post<LoginResponse>(
+  "https://intranet-logis-backend-production.up.railway.app/login",
+  { email, password }
+);
 
 console.log("Respuesta del servidor:", response); // Verifica la respuesta completa
 return response.data;
